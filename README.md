@@ -93,11 +93,11 @@ This method should be used to create new entities such as leads, contacts, etc.
 	options.LogicalName = 'lead';
 
 	dynamics.Create(options)
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -119,11 +119,11 @@ This method should be used to update an entity.
 	options.LogicalName = 'lead';
 
 	dynamics.Update(options) 
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -142,11 +142,11 @@ This method should be used to delete an entity.
 	options.EntityName = 'lead';
 
 	dynamics.Delete(options)
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -167,11 +167,11 @@ This method should be used to retrieve a single entity.
 	options.ColumnSet = ['firstname'];
 	
 	dynamics.Retrieve(options)
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -192,11 +192,11 @@ This method should be used to retrieve multiple entities.
 	options.ColumnSet = ['firstname'];
 	
 	dynamics.RetrieveMultiple(options) 
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -221,11 +221,11 @@ This method should be used to create a relation between entities.
 	options.RelatedEntities = [{Id : '00000000-dddd-0000-0000-111111111111',LogicalName : 'contact'}];
 	
 	dynamics.Associate(options) 
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -248,11 +248,11 @@ This method should be used to create a relation between entities.
 	options.RelatedEntities = [{Id : '00000000-dddd-0000-0000-111111111111',LogicalName : 'contact'}];
 	
 	dynamics.Disassociate(options)
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
@@ -268,11 +268,11 @@ This method should be used to create a relation between entities.
 	options.RequestName = 'account';
 	
 	dynamics.Execute(options)
-        .then(function (data)) {
+        .then(function (data) {
             console.log("Success!");
         })
         .catch(function (err) {
-            console.log("Failure...");
+            console.log("Failure: " + err);
         });
 ``` 
 
